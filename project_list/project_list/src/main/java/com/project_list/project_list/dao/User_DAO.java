@@ -10,4 +10,6 @@ public interface User_DAO {
     void delete_user(Long id);
 
     void register_user(User user);
+
+    boolean Auth_user(User user);
 }

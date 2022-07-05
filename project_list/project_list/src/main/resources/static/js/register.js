@@ -4,6 +4,7 @@ $(document).ready(function() {
 
 async function Add_user(){
     let datos = {};
+
     datos.first_name = document.getElementById('FirstName').value;
     datos.last_name = document.getElementById('LastName').value;
     datos.mail = document.getElementById('InputEmail').value;
@@ -16,12 +17,11 @@ async function Add_user(){
     }
 
     const request = await fetch('api/users', {
-    method: 'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
     body: JSON.stringify(datos)
   });
-  const users = await request.json();
   }

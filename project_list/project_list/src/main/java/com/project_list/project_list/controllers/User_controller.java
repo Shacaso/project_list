@@ -23,19 +23,23 @@ public class User_controller {
         user_dao.delete_user(id);
     }
 
-    @RequestMapping(value = "users1", method = RequestMethod.GET)
-    public List<User> Edit_users(){
-        return List.of(new User(001L,"Alejo","Araya","alejoaraya2000@gmail.com","12345"),
-                       new User(002L,"Matias","Federicci","matiasfedericci2000@gmail.com","67890"),
-                       new User(003L,"Ximena","Morales","ximenamorales1996gmail.com","10296"));
-    }
-
-    @RequestMapping(value = "users2", method = RequestMethod.POST)
+    @RequestMapping(value = "api/users", method = RequestMethod.POST)
     public void Add_users(@RequestBody User user){
         user_dao.register_user(user);
     }
+    @RequestMapping(value = "user1", method = RequestMethod.GET)
+    public List<User> Edit_users(){
+        return List.of();//PASS
+    }
 
-
+    @RequestMapping(value = "api/login", method = RequestMethod.POST)
+    public String login(@RequestBody User user){
+        if(user_dao.Auth_user(user)){
+            return "OK";
+        } else {
+            return "FAIL";
+        }
+    }
 
 
 }

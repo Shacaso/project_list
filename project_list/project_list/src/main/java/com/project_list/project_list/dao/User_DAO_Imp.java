@@ -28,4 +28,11 @@ public class User_DAO_Imp implements User_DAO{
     public void register_user(User user) {
         entity_manager.merge(user);
     }
+
+    @Override
+    public boolean Auth_user(User user) {
+        String query = "FROM User WHERE mail = :mail AND password = :password";
+        List<User> list = entity_manager.createQuery(query).setParameter("mail", user.getMail()).setParameter("password", user.getPassword()).getResultList();
+        return !list.isEmpty();
+    }
 }

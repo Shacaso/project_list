@@ -8,26 +8,23 @@ import javax.persistence.*;
 @Table(name = "users")
 @AllArgsConstructor //LOMBOK
 @NoArgsConstructor //LOMBOK
-@Getter
-@Setter
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-    @Column(name = "id")
+    @Getter @Setter @Column (name = "id")
     private Long ID;
 
-    @Column(name = "first_name")
+    @Getter @Setter @Column (name = "first_name")
     private String first_name;
 
-    @Column(name = "last_name")
+    @Getter @Setter @Column (name = "last_name")
     private String last_name;
 
-    @Column(name = "mail")
+    @Getter @Setter @Column (name = "mail")
     private String mail;
 
-    @Column(name = "password")
+    @Getter @Setter @Column (name = "password")
     private String password;
 
 }

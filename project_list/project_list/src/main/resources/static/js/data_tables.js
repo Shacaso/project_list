@@ -18,7 +18,7 @@ async function Set_user(){
   let list_users = '';
   for(let user of users){
   let delete_button = '<a href="#" onclick="delete_user('+user.id+')" class="btn btn-danger btn-circle .btn-sm"><i class="fas fa-trash"></i></a>';
-  let users_td = '<tr><td>'+user.first_name+' '+user.last_name+'</td><td>'+user.mail+'</td><td>'+user.password+'</td><td><a href="https://www.youtube.com/watch?v=7vHzVN0EiQc&t=1829s&ab_channel=LucasMoy">LucasMoy</a></td><td>'+delete_button+'<a href="#" class="btn btn-info btn-circle .btn-sm"><i class="fas fa-info-circle"></i></a><a href="#" class="btn btn-warning btn-circle .btn-sm"><i class="fas fa-exclamation-triangle"></i></a><a href="#" class="btn btn-success btn-circle .btn-sm"><i class="fas fa-check"></i></a></td></tr>';
+  let users_td = '<tr><td>'+user.first_name+' '+user.last_name+'</td><td>'+user.mail+'</td><td>'+user.password+'</td><td>'+delete_button+'<a href="#" class="btn btn-info btn-circle .btn-sm"><i class="fas fa-info-circle"></i></a><a href="#" class="btn btn-warning btn-circle .btn-sm"><i class="fas fa-exclamation-triangle"></i></a><a href="#" class="btn btn-success btn-circle .btn-sm"><i class="fas fa-check"></i></a></td></tr>';
 
   list_users += users_td;
   }

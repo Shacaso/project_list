@@ -1,12 +1,12 @@
 // Call the data_tables jQuery plugin
 $(document).ready(function() {
   Set_project();
-  $('#data_table').DataTable();
+  $('#data_table_project').DataTable();
 });
 
 async function Set_project(){
 
-    const request = await fetch('api/projects', {
+    const request = await fetch('api/tables_projects', {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
@@ -29,7 +29,7 @@ async function delete_project(id){
 
     if(!confirm("Sure?")){return;}
 
-    const request = await fetch('api/projects/'+id, {
+    const request = await fetch('api/tables_projects/'+id, {
     method: 'DELETE',
     headers: {
       'Accept': 'application/json',

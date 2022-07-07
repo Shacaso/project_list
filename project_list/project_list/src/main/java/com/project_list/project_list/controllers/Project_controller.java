@@ -16,7 +16,7 @@ public class Project_controller {
     @Autowired
     Project_DAO project_dao;
 
-    @RequestMapping(value = "api/projects", method = RequestMethod.GET)
+    @RequestMapping(value = "api/tables_projects", method = RequestMethod.GET)
     public List<Project> Get_projects () {
         return project_dao.Get_project();
     }

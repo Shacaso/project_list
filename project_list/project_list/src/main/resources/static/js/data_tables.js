@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 async function Set_user(){
 
-    const request = await fetch('api/users', {
+    const request = await fetch('api/table_user', {
     method: 'GET',
     headers: {
       'Accept': 'application/json',
@@ -29,7 +29,7 @@ async function delete_user(id){
 
     if(!confirm("Sure?")){return;}
 
-    const request = await fetch('api/users/'+id, {
+    const request = await fetch('api/table_user/'+id, {
     method: 'DELETE',
     headers: {
       'Accept': 'application/json',

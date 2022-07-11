@@ -5,7 +5,6 @@ $(document).ready(function() {
 });
 
 async function Set_user(){
-
     const request = await fetch('api/table_user', {
     method: 'GET',
     headers: {
@@ -36,6 +35,5 @@ async function delete_user(id){
       'Content-Type': 'application/json'
     }
   });
-
   location.reload();
 }

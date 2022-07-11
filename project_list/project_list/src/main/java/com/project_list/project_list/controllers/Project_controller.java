@@ -2,7 +2,6 @@ package com.project_list.project_list.controllers;
 
 import com.project_list.project_list.dao.Project_DAO;
 import com.project_list.project_list.models.Project;
-import com.project_list.project_list.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

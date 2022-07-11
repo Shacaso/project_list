@@ -1,6 +1,7 @@
 package com.project_list.project_list.dao;
 
 import com.project_list.project_list.models.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

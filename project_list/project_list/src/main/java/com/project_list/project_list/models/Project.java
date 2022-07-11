@@ -9,9 +9,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "projects")
-@Getter @Setter
+@Getter @Setter     //LOMBOK
 @AllArgsConstructor //LOMBOK
-@NoArgsConstructor //LOMBOK
+@NoArgsConstructor  //LOMBOK
 public class Project {
 
     @Id
@@ -19,7 +19,7 @@ public class Project {
     @Column(name = "id")
     private Long id;
 
-    @Column (name = "password")
+    @Column (name = "idea")
     private String idea;
 
    @Column (name = "state")

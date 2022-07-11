@@ -6,25 +6,26 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
+@Getter @Setter
 @AllArgsConstructor //LOMBOK
 @NoArgsConstructor //LOMBOK
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter @Setter @Column (name = "id")
+    @Column (name = "id")
     private Long ID;
 
-    @Getter @Setter @Column (name = "first_name")
+    @Column (name = "first_name")
     private String first_name;
 
-    @Getter @Setter @Column (name = "last_name")
+    @Column (name = "last_name")
     private String last_name;
 
-    @Getter @Setter @Column (name = "mail")
+    @Column (name = "mail")
     private String mail;
 
-    @Getter @Setter @Column (name = "password")
+    @Column (name = "password")
     private String password;
 
 }

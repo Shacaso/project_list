@@ -6,9 +6,9 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "users")
-@Getter @Setter
+@Getter @Setter     //LOMBOK
 @AllArgsConstructor //LOMBOK
-@NoArgsConstructor //LOMBOK
+@NoArgsConstructor  //LOMBOK
 public class User {
 
     @Id

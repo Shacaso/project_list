@@ -16,7 +16,7 @@ async function Add_user(){
     return;
     }
 
-    const request = await fetch('api/users', {
+    const request = await fetch('api/table_user', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

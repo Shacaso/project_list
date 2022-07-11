@@ -7,4 +7,7 @@ import java.util.List;
 
 public interface Project_DAO {
     List<Project> Get_project();
+
+    void Delete_project(Long id);
+    void Add_project ( Project project );
 }
